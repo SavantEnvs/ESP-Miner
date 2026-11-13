@@ -1,0 +1,8 @@
+project: savantenvs/ESP-Miner
+target: fuzz_coinbase_tx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_coinbase_tx/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_coinbase_tx
+    libfuzzer: true

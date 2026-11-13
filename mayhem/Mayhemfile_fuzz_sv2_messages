@@ -1,0 +1,8 @@
+project: savantenvs/ESP-Miner
+target: fuzz_sv2_messages
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sv2_messages/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sv2_messages
+    libfuzzer: true
